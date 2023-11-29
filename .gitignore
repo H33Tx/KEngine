@@ -2,3 +2,5 @@
 /database/*
 /software/Smarty/compile/*
 /assets/*
+/system/plugins/*
+/system/data/*
