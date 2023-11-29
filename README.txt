@@ -18,6 +18,7 @@ with it than before.
 PHP 5.3 to 7.4, 8.x is not supported.
 
 # Installation
+Rename `ex.config.php` to `config.php` and edit it to your likings.
 You need to install required node_modules. Do so with `npm install`
 or download `node_modules.zip` in the "releases"-tab.
 
