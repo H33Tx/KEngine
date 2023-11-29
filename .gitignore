@@ -4,3 +4,5 @@
 /assets/*
 /system/plugins/*
 /system/data/*
+/system/themes/*
+config.php
