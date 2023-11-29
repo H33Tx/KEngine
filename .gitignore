@@ -6,3 +6,5 @@
 /system/data/*
 /system/themes/*
 config.php
+/css/*
+/js/*
