@@ -113,6 +113,7 @@ Euphoria
 |- -- index.php
 |- pages/           - Holds the page-contents of your templates
 |- -- index.tpl
+|- -- 404.tpl
 |- parts/           - Holds parts of your templates
 |- -- foot.tpl
 |- -- footer.tpl
@@ -120,6 +121,7 @@ Euphoria
 |- -- header.tpl
 |- views/           - Holds your PHP Handlers (e.g. index.php)
 |- -- index.php
+|- -- 404.php
 
 ## Functions
 Some of the core-functions from the `functions.php`-file.
