@@ -1,2 +1,0 @@
-# KEngine
- Katana PHP Engine
