@@ -60,6 +60,7 @@ foreach ($theme["plugins"] as $reqPlugin) {
 }
 
 // Assigning variables
+$smarty->assign("theme", $theme);
 $smarty->assign("config", $config);
 $smarty->assign("version", file_get_contents(ps(__DIR__ . "/version.txt")));
 

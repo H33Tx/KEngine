@@ -8,3 +8,5 @@
 config.php
 /css/*
 /js/*
+tw.config.php
+/bootstrap/*
