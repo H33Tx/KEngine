@@ -23,15 +23,6 @@ $parsedown->setSafeMode(true);
 require_once ROOT . "software/HTMLPurifier/HTMLPurifier.auto.php";
 $purifier = new HTMLPurifier(HTMLPurifier_Config::createDefault());
 
-// Smarty
-require_once ROOT . "software/Smarty/Smarty.class.php";
-$smarty = new Smarty();
-$smarty->setTemplateDir(ps(__DIR__ . $config["smarty"]["template"] . "/" . $config["theme"]));
-
-$smarty->setConfigDir(ps(__DIR__ . $config["smarty"]["config"]));
-$smarty->setCompileDir(ps(__DIR__ . $config["smarty"]["compile"]));
-$smarty->setCacheDir(ps(__DIR__ . $config["smarty"]["cache"]));
-
 // Salt
 if (!file_exists(ps(__DIR__ . "/system/data/salt.txt"))) {
     die("System needs a salt!! located in 'system/data/salt.txt'");
@@ -49,8 +40,18 @@ if (empty($config["salt"])) {
 
 // require_once ps(__DIR__ . "/system/languages/{$config["default"]["lang"]}.php");
 
-// Getting all plugins for the Theme
+// Smarty
 require __DIR__ . "/system/themes/{$config["theme"]}/info.php";
+
+require_once ROOT . "software/Smarty/Smarty.class.php";
+$smarty = new Smarty();
+$smarty->setTemplateDir(ps(__DIR__ . $config["smarty"]["template"] . "/" . $config["theme"] . "/themes/" . $theme["config"]["theme"]));
+
+$smarty->setConfigDir(ps(__DIR__ . $config["smarty"]["config"]));
+$smarty->setCompileDir(ps(__DIR__ . $config["smarty"]["compile"]));
+$smarty->setCacheDir(ps(__DIR__ . $config["smarty"]["cache"]));
+
+// Getting all plugins for the Theme
 foreach ($theme["plugins"] as $reqPlugin) {
     if (!file_exists(ps(__DIR__ . "/system/plugins/" . $reqPlugin . ".php"))) {
         die("This theme requires following plugin: " . $reqPlugin);
