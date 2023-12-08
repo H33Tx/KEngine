@@ -35,7 +35,7 @@ For installation, see the paragraph above.
 (string)    ROOT    // Root-directory of your installation
                     // Ends with a slash. PHP only
 (array)     $theme  // Holds all data about your theme
-                    // PHP only
+                    // Smarty & PHP
 (string)    $timeZone   // Timezone Name of server. Smarty & PHP
 (float)     $version    // Version of installed KEngine instance.
                     // Smarty only
@@ -80,6 +80,7 @@ For example, a GET-request for the index would look like this:
 ... or read the official documentation: https://phprouter.com
 
 ## Autoload
+-- This is outdated and needs update, missing $parsedown. ts:2023-12-08
 This file is kind of the core of KEngine.
 Structure:
 - Creates session
@@ -104,6 +105,7 @@ time it took to load everything in miliseconds to the Smarty vari-
 able `{$rendertime}`.
 
 ## Themes
+-- This is outdated and needs update. ts:2023-12-08
 Creating themes is actually like creating a new software - but
 without having to write the complete back-end, just a few handlers
 and frontend-files. In this example, we will use the `euphoria`-theme:

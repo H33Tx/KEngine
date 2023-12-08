@@ -18,6 +18,7 @@ require_once ROOT . "system/files/functions.php";
 require_once ROOT . "software/Parsedown.php";
 $parsedown = new Parsedown();
 $parsedown->setSafeMode(true);
+$parsedown->setBreaksEnabled(true);
 
 // HTML-Purifier
 require_once ROOT . "software/HTMLPurifier/HTMLPurifier.auto.php";
@@ -64,6 +65,7 @@ foreach ($theme["plugins"] as $reqPlugin) {
 $smarty->assign("theme", $theme);
 $smarty->assign("config", $config);
 $smarty->assign("version", file_get_contents(ps(__DIR__ . "/version.txt")));
+$smarty->assign("parsedown", $parsedown);
 
 // Time Zone
 # I know you could solve it date_default_timezone_get() but whatever
