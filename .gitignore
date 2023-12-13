@@ -1,7 +1,8 @@
 /node_modules/*
 /database/*
 /software/Smarty/compile/*
-/assets/*
+/assets/covers/*
+/assets/tmp/*
 /system/plugins/*
 /system/data/*
 /system/themes/*
