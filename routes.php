@@ -12,7 +12,11 @@ if (!file_exists(__DIR__ . "/system/themes/{$config["theme"]}/routes.php")) {
 
 define("ROOT", __DIR__ . "/");
 $roudir = "system/themes/{$config["theme"]}/";
-require __DIR__ . "/system/themes/{$config["theme"]}/routes.php";
+require ROOT . $roudir . "info.php";
+require ROOT . $roudir . "routes.php";
+require ROOT . $roudir . "themes/{$theme["config"]["theme"]}/routes.php";
+
+// die(print_r($customRoutes));
 
 // ##################################################
 // ##################################################
