@@ -11,3 +11,4 @@ config.php
 /js/*
 tw.config.php
 /bootstrap/*
+node_modules.zip
